@@ -18,6 +18,8 @@ docker container rm containerId/namacontainer //hapus-remove container
 docker container logs containerId/namacontainer //lihat log container
 docker container logs -f containerId/namacontainer //lihat log container realtime
 
-docker container exec -i -t containerId/namacontainer bin/bash// eksekusi kode program yg ada di dalam container
+docker container exec -i -t containerId/namacontainer bin/bash //eksekusi kode program yg ada di dalam container
 
-docker container create --name contohcontainernginx --publish 8080:80 nginx:latest
+docker container create --name contohcontainernginx --publish 8080:80 nginx:latest //akses container by host dengan forwarding port host ke port container
+
+docker container create --name contohcontainermongo --env --publish 27017:27017 --env MONGO_INITDB_ROOT_USERNAME:towick --env MONGO_INITDB_ROOT_PASSWORD:towick mongo:latest //konfigurasi aplikasi dapat diubah dinamis tanpa hardcode didalam aplikasi
