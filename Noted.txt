@@ -17,3 +17,5 @@ docker container rm containerId/namacontainer //hapus-remove container
 
 docker container logs containerId/namacontainer //lihat log container
 docker container logs -f containerId/namacontainer //lihat log container realtime
+
+docker container exec containerId/namacontainer bin/bash// eksekusi kode program yg ada di dalam container
