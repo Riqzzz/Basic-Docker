@@ -1,0 +1,1 @@
+docker image rm redis:latest //uninstall image redis versi terbaru
