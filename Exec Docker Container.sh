@@ -1,1 +1,1 @@
-docker container exec containerId/namacontainer bin/bash// eksekusi kode program yg ada di dalam container
+docker container exec -i -t containerId/namacontainer bin/bash// eksekusi kode program yg ada di dalam container
