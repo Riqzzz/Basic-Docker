@@ -1,0 +1,19 @@
+docker image ls //list image(installer) docker yg ada
+
+docker image pull redis:latest //menginstall image redis versi terbaru
+
+docker image rm redis:latest //uninstall image redis versi terbaru
+
+docker container ls -a //lihat semua container yg ada
+docker container ls //lihat semua container yg running
+
+docker container create --name namacontainernyaapa namaimageyangdipakaiapa:tag //create container
+
+docker container start containerId/namacontainer //run container
+
+docker container stop containerId/namacontainer //stop container
+
+docker container rm containerId/namacontainer //hapus-remove container
+
+docker container logs containerId/namacontainer //lihat log container
+docker container logs -f containerId/namacontainer //lihat log container realtime

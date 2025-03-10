@@ -1,0 +1,1 @@
+docker image pull redis:latest //menginstall image redis versi terbaru
