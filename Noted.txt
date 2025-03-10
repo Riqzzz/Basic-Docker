@@ -18,4 +18,6 @@ docker container rm containerId/namacontainer //hapus-remove container
 docker container logs containerId/namacontainer //lihat log container
 docker container logs -f containerId/namacontainer //lihat log container realtime
 
-docker container exec containerId/namacontainer bin/bash// eksekusi kode program yg ada di dalam container
+docker container exec -i -t containerId/namacontainer bin/bash// eksekusi kode program yg ada di dalam container
+
+docker container create --name contohcontainernginx --publish 8080:80 nginx:latest
