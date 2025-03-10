@@ -1,0 +1,1 @@
+docker container rm containerId/namacontainer //hapus-remove container
