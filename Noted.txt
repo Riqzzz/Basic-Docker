@@ -22,6 +22,10 @@ docker container exec -i -t containerId/namacontainer bin/bash //eksekusi kode p
 
 docker container create --name contohcontainernginx --publish 8080:80 nginx:latest //akses container by host dengan forwarding port host ke port container
 
-docker container create --name contohcontainermongo --env --publish 27017:27017 --env MONGO_INITDB_ROOT_USERNAME:towick --env MONGO_INITDB_ROOT_PASSWORD:towick mongo:latest //konfigurasi aplikasi dapat diubah dinamis tanpa hardcode didalam aplikasi
+docker container create --name contohcontainermongo --env --publish 27017:27017 --env MONGO_INITDB_ROOT_USERNAME=towick --env MONGO_INITDB_ROOT_PASSWORD=towick mongo:latest //konfigurasi aplikasi dapat diubah dinamis tanpa hardcode didalam aplikasi
 
 docker container stats //untuk melihat resource dari masing" container yang ada
+
+docker container create --name contohcontainernginxlimit --publish 8081:80 --cpu 0.5 --memory 100m nginx:latest //limit resource usage memory and cpu container
+
+docker container create --name containerbindmountmongo --publish 27018:27017 --mount "type=bind,source=D:\docker\basic-docker\data-mongo,destination=/data/db" --env MONGO_INITDB_ROOT_USERNAME=towick --env MONGO_INITDB_ROOT_PASSWORD=towick mongo:latest //mounting(sharing)file/folder host ke container
