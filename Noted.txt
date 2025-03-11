@@ -23,3 +23,5 @@ docker container exec -i -t containerId/namacontainer bin/bash //eksekusi kode p
 docker container create --name contohcontainernginx --publish 8080:80 nginx:latest //akses container by host dengan forwarding port host ke port container
 
 docker container create --name contohcontainermongo --env --publish 27017:27017 --env MONGO_INITDB_ROOT_USERNAME:towick --env MONGO_INITDB_ROOT_PASSWORD:towick mongo:latest //konfigurasi aplikasi dapat diubah dinamis tanpa hardcode didalam aplikasi
+
+docker container stats //untuk melihat resource dari masing" container yang ada

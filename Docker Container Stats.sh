@@ -1,0 +1,1 @@
+docker container stats //untuk melihat resource dari masing" container yang ada
