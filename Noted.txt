@@ -28,4 +28,8 @@ docker container stats //untuk melihat resource dari masing" container yang ada
 
 docker container create --name contohcontainernginxlimit --publish 8081:80 --cpu 0.5 --memory 100m nginx:latest //limit resource usage memory and cpu container
 
-docker container create --name containerbindmountmongo --publish 27018:27017 --mount "type=bind,source=D:\docker\basic-docker\data-mongo,destination=/data/db" --env MONGO_INITDB_ROOT_USERNAME=towick --env MONGO_INITDB_ROOT_PASSWORD=towick mongo:latest //mounting(sharing)file/folder host ke container
+docker container create --name containerbindmountmongo --publish 27018:27017 --mount "type=bind,source=D:\docker\basic-docker\data-mongo,destination=/data/db" --env MONGO_INITDB_ROOT_USERNAME=towick --env MONGO_INITDB_ROOT_PASSWORD=towick mongo:latest //mounting(sharing)file/folder bind host ke container
+
+docker volume create namavolume //buat docker volume
+
+docker volume ls //list docker volume
